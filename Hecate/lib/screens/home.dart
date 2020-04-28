@@ -1,4 +1,5 @@
 import 'package:Hecate/screens/mapScreen.dart';
+import 'package:Hecate/screens/telemetryScreen.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -12,6 +13,7 @@ class _HomeState extends State<Home> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     MapScreen(),
+    TelemetryScreen(),
   ];
 
   @override
@@ -23,7 +25,8 @@ class _HomeState extends State<Home> {
       body: _children[_currentIndex],
 
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0, // this will be set when a new tab is tapped
+        currentIndex: _currentIndex, // this will be set when a new tab is tapped
+        onTap: onTabTapped,
         items: [
           BottomNavigationBarItem(
             icon: new Icon(Icons.map),

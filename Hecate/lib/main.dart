@@ -1,5 +1,6 @@
 import 'package:Hecate/screens/home.dart';
 import 'package:Hecate/screens/mapScreen.dart';
+import 'package:Hecate/screens/telemetryScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +16,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: Home()
+      initialRoute: '/map',
+      routes: {
+        '/map' : (context) => MapScreen(),
+        '/telemetry' : (context) => TelemetryScreen(),
+      }
     );
   }
 }
