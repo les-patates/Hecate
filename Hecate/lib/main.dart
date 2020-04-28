@@ -1,3 +1,4 @@
+import 'package:Hecate/screens/home.dart';
 import 'package:Hecate/screens/mapScreen.dart';
 import 'package:flutter/material.dart';
 
